@@ -18,7 +18,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AcmeBundleNotificationBundle:Default:master.html.twig');
+        return $this->render('AcmeBundleNotificationBundle:Default:index.html.twig');
     }
 
 	/**
@@ -51,7 +51,8 @@ class DefaultController extends Controller
 		}
 
 		$notificationAdapter->setProvider($provider);
+		$result = $notificationAdapter->send();
 
-		return new Response($notificationAdapter->send(), Response::HTTP_OK);
+		return $this->render('AcmeBundleNotificationBundle:Default:result.html.twig', array('result' => $result));
 	}
 }
