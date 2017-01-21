@@ -14,7 +14,7 @@ use Symfony\Component\HttpFoundation\Response;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="notification-index")
      */
     public function indexAction()
     {
