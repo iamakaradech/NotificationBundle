@@ -1,0 +1,4 @@
+acme_bundle_notification:
+    resource: "@AcmeBundleNotificationBundle/Controller/"
+    type:     annotation
+    prefix:   /
