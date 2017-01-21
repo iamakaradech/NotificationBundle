@@ -1,0 +1,22 @@
+        {% extends 'AcmeBundleNotificationBundle:Default:master.html.twig' %}
+        {% block site_title %}
+            <h3>Send Notification</h3>
+        {% endblock %}
+        {% block content %}
+        <form action="/send" method="post" class="form-horizontal">
+            <div class="form-group col-sm-8">
+                <label for="message" class="col-sm-4 control-label">Message</label>
+                <div class="col-sm-8"><input type="text" name="message" class="form-control" id="message"></div>
+            </div>
+            <div class="form-group col-sm-2">
+                <select name="provider" id="provider" class="form-control">
+                    <option value="sms">SMS</option>
+                    <option value="email">E-Mail</option>
+                    <option value="twitter">Twitter</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <button class="btn btn-success">Send</button>
+            </div>
+        </form>
+        {% endblock %}
