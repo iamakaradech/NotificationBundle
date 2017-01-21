@@ -5,6 +5,7 @@ namespace Acme\Bundle\NotificationBundle\Controller;
 use Acme\Bundle\NotificationBundle\Notification\EmailNotification;
 use Acme\Bundle\NotificationBundle\Notification\NotificationAdapter;
 use Acme\Bundle\NotificationBundle\Notification\SmsNotification;
+use Acme\Bundle\NotificationBundle\Notification\TwitterNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -41,15 +42,16 @@ class DefaultController extends Controller
 			case 'email':
 				$provider = new EmailNotification($message);
 				break;
+			case 'twitter':
+				$provider = new TwitterNotification($message);
+				break;
 			default:
 				$provider = new SmsNotification($message);
 				break;
 		}
 
 		$notificationAdapter->setProvider($provider);
-		var_dump($notificationAdapter->send());
 
-		$response = new Response('Hello ', Response::HTTP_OK);
-		return $response;
+		return new Response($notificationAdapter->send(), Response::HTTP_OK);
 	}
 }
