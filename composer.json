@@ -1,7 +1,15 @@
 {
-  "name": "akaradech/notifybundle",
-  "description": "Notification Bundle for symfony 3",
-  "require": {
-  },
-  "minimum-stability": "stable"
+    "name": "akaradech/notifybundle",
+    "description": "Notification Bundle",
+    "keywords": ["notification","bundle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Akaradech",
+            "email": "iamakaradech@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    }
 }
