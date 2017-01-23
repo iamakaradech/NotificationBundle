@@ -1,5 +1,5 @@
 <?php
-namespace Acme\Bundle\NotificationBundle\Notification;
+namespace Akaradech\NotificationBundle\Notification;
 
 use Swift_Mailer;
 use Swift_Message;

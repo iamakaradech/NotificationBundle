@@ -1,5 +1,5 @@
 <?php
-namespace Acme\Bundle\NotificationBundle\Notification;
+namespace Akaradech\NotificationBundle\Notification;
 
 class NotificationAdapter
 {

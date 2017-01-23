@@ -1,0 +1,9 @@
+<?php
+
+namespace Akaradech\NotificationBundle;
+
+use Symfony\Component\HttpKernel\Bundle\Bundle;
+
+class NotificationBundle extends Bundle
+{
+}

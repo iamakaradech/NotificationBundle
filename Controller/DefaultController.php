@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\Bundle\NotificationBundle\Controller;
+namespace Akaradech\NotificationBundle\Controller;
 
 use Acme\Bundle\NotificationBundle\Notification\EmailNotification;
 use Acme\Bundle\NotificationBundle\Notification\NotificationAdapter;
