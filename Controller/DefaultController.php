@@ -2,10 +2,10 @@
 
 namespace Akaradech\NotificationBundle\Controller;
 
-use Acme\Bundle\NotificationBundle\Notification\EmailNotification;
-use Acme\Bundle\NotificationBundle\Notification\NotificationAdapter;
-use Acme\Bundle\NotificationBundle\Notification\SmsNotification;
-use Acme\Bundle\NotificationBundle\Notification\TwitterNotification;
+use Akaradech\NotificationBundle\Notification\EmailNotification;
+use Akaradech\NotificationBundle\Notification\NotificationAdapter;
+use Akaradech\NotificationBundle\Notification\SmsNotification;
+use Akaradech\NotificationBundle\Notification\TwitterNotification;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -18,7 +18,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('AcmeBundleNotificationBundle:Default:index.html.twig');
+        return $this->render('NotificationBundle:Default:index.html.twig');
     }
 
 	/**
@@ -53,6 +53,6 @@ class DefaultController extends Controller
 		$notificationAdapter->setProvider($provider);
 		$result = $notificationAdapter->send();
 
-		return $this->render('AcmeBundleNotificationBundle:Default:result.html.twig', array('result' => $result));
+		return $this->render('NotificationBundle:Default:result.html.twig', array('result' => $result));
 	}
 }
