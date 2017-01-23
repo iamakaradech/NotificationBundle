@@ -12,3 +12,4 @@ $bundles = [
   new Akaradech\NotificationBundle\NotificationBundle()
 ];
 ```
+### Have fun :)
